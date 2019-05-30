@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Petterp.Shenghuo.ShenghuoActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/wendu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="19°"
+                    android:textColor="#009DD9"
+                    android:textSize="75sp" />
+
+                <TextView
+                    android:id="@+id/jintian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wendu"
+                    android:text="今天：12-24°C"
+                    android:textColor="#009DD9"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/refresh" />
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="今日生活指数"
+            android:textColor="#009DD9"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#DBEFF5"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/zi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableTop="@mipmap/icon101"
+                    android:gravity="center"
+                    android:text="紫外线指数"
+                    android:textColor="#009DD9"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/zi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/zi"
+                    android:text="较易发(100)"
+                    android:textColor="#009DD9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+
+                    android:id="@+id/zi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/zi1"
+                    android:layout_toRightOf="@id/zi"
+                    android:maxEms="10"
+                    android:text="中等(100)"
+                    android:textColor="#747474"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+
+                android:background="#DBEFF5"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/gan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableTop="@mipmap/icon101"
+                    android:gravity="center"
+                    android:text="感冒指数"
+                    android:textColor="#009DD9"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/gan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_toRightOf="@id/gan"
+                    android:text="中等(100)"
+                    android:textColor="#009DD9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+
+                    android:id="@+id/gan2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gan1"
+                    android:layout_toRightOf="@id/gan"
+                    android:maxEms="10"
+                    android:text="asdadsadsa"
+                    android:textColor="#747474"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+
+                android:layout_weight="1"
+                android:background="#DBEFF5"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/chuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableTop="@mipmap/icon103"
+                    android:gravity="center"
+                    android:text="穿衣指数"
+                    android:textColor="#009DD9"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/chuan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_toRightOf="@id/chuan"
+                    android:text="中等(100)"
+                    android:textColor="#009DD9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/chuan2"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chuan1"
+                    android:layout_toRightOf="@id/chuan"
+                    android:maxEms="10"
+                    android:text="中等(100)"
+                    android:textColor="#747474"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#DBEFF5"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/yong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableTop="@mipmap/icon104"
+                    android:gravity="center"
+                    android:text="运动指数"
+                    android:textColor="#009DD9"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/yong1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_toRightOf="@id/yong"
+                    android:text="中等(100)"
+                    android:textColor="#009DD9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+
+                    android:id="@+id/yong2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/yong1"
+                    android:layout_toRightOf="@id/yong"
+                    android:maxEms="10"
+                    android:text="中等(100)"
+                    android:textColor="#747474"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:background="#DBEFF5"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/kong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableTop="@mipmap/icon105"
+                    android:gravity="center"
+                    android:text="空气污染扩散\n指数"
+                    android:textColor="#009DD9"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/kong1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_toRightOf="@id/kong"
+                    android:text="中等(100)"
+                    android:textColor="#009DD9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/kong2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kong1"
+                    android:layout_toRightOf="@id/kong"
+                    android:maxEms="10"
+                    android:text="中等(100)"
+                    android:textColor="#747474"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="今日生活指数"
+            android:textColor="#009DD9"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shenghuo_item1"
+                    android:padding="5dp"
+                    android:text="空气质量"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:padding="5dp"
+                    android:text="温度"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/view3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shenghuo_item1"
+                    android:padding="5dp"
+                    android:text="相对湿度"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/view4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shenghuo_item1"
+                    android:padding="5dp"
+                    android:text="二氧化碳"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

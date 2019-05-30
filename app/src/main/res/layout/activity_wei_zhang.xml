@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Petterp.WeiZhang_Rili.WeiZhangActivity">
+
+    <include layout="@layout/title_layout" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/margin_50"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20sp"
+            android:id="@+id/rili"
+            android:layout_height="@dimen/margin_50"
+            android:src="@mipmap/calendar"/>
+        <TextView
+            android:background="@drawable/weizhang_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:id="@+id/time1"
+            android:text="2016-5-1"
+            android:drawableRight="@mipmap/sanjiao"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="至"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_marginLeft="@dimen/margin_50"
+            android:layout_marginRight="@dimen/margin_50"
+            />
+
+        <TextView
+            android:background="@drawable/weizhang_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:drawablePadding="10dp"
+            android:id="@+id/time2"
+            android:gravity="center"
+            android:text="2016-5-1"
+            android:drawableRight="@mipmap/sanjiao"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginLeft="@dimen/margin_50"
+        android:text="次数"/>
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_50"
+        android:id="@+id/chart"
+        android:layout_marginRight="@dimen/margin_50"
+        android:layout_marginBottom="@dimen/margin_50"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"/>
+</LinearLayout>
